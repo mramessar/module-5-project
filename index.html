@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmberTask Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EmberTask</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tasks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<header class="hero-section text-center text-white d-flex flex-column align-items-center justify-content-center">
+    <h1 class="display-4 fw-bold">Stay Organized, Stay Focused</h1>
+    <p class="lead">Your productivity, your way.</p>
+
+    <!-- Carousel for Motivational Quotes -->
+    <div id="quoteCarousel" class="carousel slide my-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p class="fs-4">"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
+            </div>
+            <div class="carousel-item">
+                <p class="fs-4">"Don’t watch the clock; do what it does. Keep going."</p>
+            </div>
+            <div class="carousel-item">
+                <p class="fs-4">"The secret of getting ahead is getting started."</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev" 
+        style="top: 50%; transform: translateY(-50%); left: -50px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next" 
+        style="top: 50%; transform: translateY(-50%); right: -50px;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+    </div>
+</header>
+
+    <!-- Task Form -->
+    <div class="container my-5">
+        <h3>Add a New Task</h3>
+        <form id="taskForm">
+            <div class="mb-3">
+                <label for="taskName" class="form-label">Task Name</label>
+                <input type="text" class="form-control" id="taskName" required>
+            </div>
+            <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priority</label>
+                <select class="form-control" id="priority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-pink">Add Task</button>
+        </form>
+    </div>
+
+    <!-- Task Table -->
+    <div class="container my-5">
+        <h3>Your Tasks</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Quick Notes Section -->
+<div class="container my-5">
+    <h3>Quick Notes</h3>
+    <div class="row" id="notesSection">
+        
+    </div>
+    <div class="mt-3">
+        <input type="text" class="form-control" id="noteInput" placeholder="Type a note...">
+        <button class="btn btn-pink mt-2" id="addNoteBtn">Add Note</button>
+    </div>
+</div>
+
+ <!-- FAQs Section -->
+ <div class="container my-5">
+    <h3>Frequently Asked Questions</h3>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    How do I add a task?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Fill in the details then click on the "Add Task" button.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    How do I add a note?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Type in the note field then click on the "Add Note" button.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap JS & Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Pink Notion Theme */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fef6fb;
+    color: #333;
+}
+
+.hero-section {
+    height: 50vh;
+    background: url('hero.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#motivationQuote {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.gradient-text {
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff758c 0%, #ff7eb3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar Customization */
+.navbar-dark {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff !important;
+}
+
+/* Buttons */
+.btn-pink {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3) !important;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    opacity: 0.85;
+}
+
+/* Delete Buttons (Tasks & Notes) */
+.btn-delete {
+    background: #d179a6 !important;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background: #b05c8c !important;
+    opacity: 0.85;
+}
+
+/* Form Headings */
+.pink-text {
+    color: #ff7eb3;
+}
+
+/* Task Cards */
+.task-card {
+    background: white;
+    border: none;
+    border-left: 5px solid #ff758c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Quick Notes Styling */
+#notesSection .card {
+    background: #ffe3f1 !important; 
+    border-left: 5px solid #d179a6 !important;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+#notesSection .card:hover {
+    transform: scale(1.05);
+}
+
+#noteInput {
+    max-width: 400px;
+}
+
+/* FAQ Accordion */
+.accordion-button {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3) !important;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #ff758c !important;
+    color: white;
+}
+
+.accordion-item {
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
