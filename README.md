@@ -47,7 +47,7 @@ Photo by [Doug Bagg](https://unsplash.com/@dougbagg_?utm_content=creditCopyText&
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/embertask-dashboard.git
+   git clone https://github.com/mramessar/module-5-project
    
    ```
 
